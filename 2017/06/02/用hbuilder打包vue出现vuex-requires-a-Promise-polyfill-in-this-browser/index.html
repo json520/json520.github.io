@@ -9,6 +9,7 @@
   <title>用hbuilder打包vue出现vuex requires a Promise polyfill in this browser | JSONs!���Ƴ���Ա���ǌ�˿����֪��</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="问题：用vue-cli脚手架写的用了vuex！结果在用hbuilder打包在真机测试的时候出现vuex requires a Promise polyfill in this browse报错！解决方法如下：报错原理：因为使用了 ES6 中用来传递异步消息的的Promise，而IE低版本的浏览器不支持。说白了就是hbuilder中打包的代码中不能支持ES6！解决原理：加入babel polyfil">
+<meta name="keywords" content="vue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用hbuilder打包vue出现vuex requires a Promise polyfill in this browser">
 <meta property="og:url" content="http://yoursite.com/2017/06/02/用hbuilder打包vue出现vuex-requires-a-Promise-polyfill-in-this-browser/index.html">
@@ -18,7 +19,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6241299-0186501161151570.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6241299-ce108ecf4e80c771.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6241299-1dd35fb2b9937952.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-06-02T12:45:44.360Z">
+<meta property="og:updated_time" content="2017-06-02T12:54:40.089Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用hbuilder打包vue出现vuex requires a Promise polyfill in this browser">
 <meta name="twitter:description" content="问题：用vue-cli脚手架写的用了vuex！结果在用hbuilder打包在真机测试的时候出现vuex requires a Promise polyfill in this browse报错！解决方法如下：报错原理：因为使用了 ES6 中用来传递异步消息的的Promise，而IE低版本的浏览器不支持。说白了就是hbuilder中打包的代码中不能支持ES6！解决原理：加入babel polyfil">
@@ -184,7 +185,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="问题：用vue-cli脚手架写的用了vuex！结果在用hbuilder打包在真机测试的时候出现vuex-requires-a-Promise-polyfill-in-this-browse报错！"><a href="#问题：用vue-cli脚手架写的用了vuex！结果在用hbuilder打包在真机测试的时候出现vuex-requires-a-Promise-polyfill-in-this-browse报错！" class="headerlink" title="问题：用vue-cli脚手架写的用了vuex！结果在用hbuilder打包在真机测试的时候出现vuex requires a Promise polyfill in this browse报错！"></a>问题：用vue-cli脚手架写的用了vuex！结果在用hbuilder打包在真机测试的时候出现vuex requires a Promise polyfill in this browse报错！</h4><h4 id="解决方法如下："><a href="#解决方法如下：" class="headerlink" title="解决方法如下："></a>解决方法如下：</h4><p><strong>报错原理：</strong>因为使用了 ES6 中用来传递异步消息的的Promise，而IE低版本的浏览器不支持。说白了就是hbuilder中打包的代码中不能支持ES6！<br><strong>解决原理：</strong>加入babel polyfill，可以模拟ES6使用环境，支持所有ES6新语法！<br><strong>解决方法：</strong><br>1.进入vue项目根目录下执行命令行<code>npm install --save babel-polyfill</code>安装babel-ployfill<br>2.本地进入vue项目根目录下找到<strong>node_modules</strong>目录！就是安装依赖的那个文件。找到<strong>babel-polyfill</strong>文件夹下面的<strong>polyfill.min.js</strong>！拷贝出来放到根目录下的<strong>static</strong>静态文件夹下面！<em>node_modules下面文件夹很多慢慢往下翻。不要急骚年！想想我不知道怎么解决的时候自己尝试解决有多难就好了！</em><br><img src="http://upload-images.jianshu.io/upload_images/6241299-17931c7f2988b43f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="QQ截图20170602200633.png"><br>3.放进去还没结束！看见图片中的index.html没！这是vue的入口文件！把<strong>polyfill.min.js</strong>引入！所有的页面都是在这个页面展现的！里面也可以引入传统的js文件！记的放在body前面！以免出现使用的时候找不到！<em>为啥找不到！去复习下js是怎么执行的！</em></p>
+        <h4 id="问题：用vue-cli脚手架写的用了vuex！结果在用hbuilder打包在真机测试的时候出现vuex-requires-a-Promise-polyfill-in-this-browse报错！"><a href="#问题：用vue-cli脚手架写的用了vuex！结果在用hbuilder打包在真机测试的时候出现vuex-requires-a-Promise-polyfill-in-this-browse报错！" class="headerlink" title="问题：用vue-cli脚手架写的用了vuex！结果在用hbuilder打包在真机测试的时候出现vuex requires a Promise polyfill in this browse报错！"></a>问题：用vue-cli脚手架写的用了vuex！结果在用hbuilder打包在真机测试的时候出现vuex requires a Promise polyfill in this browse报错！</h4><h4 id="解决方法如下："><a href="#解决方法如下：" class="headerlink" title="解决方法如下："></a>解决方法如下：</h4><p><strong>报错原理：</strong>因为使用了 ES6 中用来传递异步消息的的Promise，而IE低版本的浏览器不支持。说白了就是hbuilder中打包的代码中不能支持ES6！<br><strong>解决原理：</strong>加入babel polyfill，可以模拟ES6使用环境，支持所有ES6新语法！<br><a id="more"></a><br><strong>解决方法：</strong><br>1.进入vue项目根目录下执行命令行<code>npm install --save babel-polyfill</code>安装babel-ployfill<br>2.本地进入vue项目根目录下找到<strong>node_modules</strong>目录！就是安装依赖的那个文件。找到<strong>babel-polyfill</strong>文件夹下面的<strong>polyfill.min.js</strong>！拷贝出来放到根目录下的<strong>static</strong>静态文件夹下面！<em>node_modules下面文件夹很多慢慢往下翻。不要急骚年！想想我不知道怎么解决的时候自己尝试解决有多难就好了！</em><br><img src="http://upload-images.jianshu.io/upload_images/6241299-17931c7f2988b43f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="QQ截图20170602200633.png"><br>3.放进去还没结束！看见图片中的index.html没！这是vue的入口文件！把<strong>polyfill.min.js</strong>引入！所有的页面都是在这个页面展现的！里面也可以引入传统的js文件！记的放在body前面！以免出现使用的时候找不到！<em>为啥找不到！去复习下js是怎么执行的！</em></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/6241299-0186501161151570.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="QQ截图20170602202120.png"><br>4.现在在hbuilder运行一遍！<br><img src="http://upload-images.jianshu.io/upload_images/6241299-ce108ecf4e80c771.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br>好了！骚年！app已经可以打包了！<br>这是我用vue写出来的小说界面！现在是打包成app!纯纯的H5</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/6241299-1dd35fb2b9937952.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br>顺便附上我的<a href="http://json520.com/" target="_blank" rel="external">博客地址</a> <strong>QQ:397939857</strong></p>
 
@@ -226,6 +227,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -410,6 +422,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
