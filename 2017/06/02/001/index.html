@@ -5,27 +5,27 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>用hbuilder就是不用condova打包 | JSONs!���Ƴ���Ա���ǌ�˿����֪��</title>
+  <link rel="dns-prefetch" href="http://json520.com">
+  <title>用hbuilder就是不用condova打包 | json的博客！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="用hbuilder打包vue出现vuex requires a Promise polyfill in this browser">
 <meta name="keywords" content="vue,hbuilder">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用hbuilder就是不用condova打包">
-<meta property="og:url" content="http://yoursite.com/2017/06/02/001/index.html">
-<meta property="og:site_name" content="JSONs!���Ƴ���Ա���ǌ�˿����֪��">
+<meta property="og:url" content="http://json520.com/2017/06/02/001/index.html">
+<meta property="og:site_name" content="json的博客！">
 <meta property="og:description" content="用hbuilder打包vue出现vuex requires a Promise polyfill in this browser">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6241299-17931c7f2988b43f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6241299-0186501161151570.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6241299-ce108ecf4e80c771.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6241299-1dd35fb2b9937952.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-06-04T08:32:46.868Z">
+<meta property="og:updated_time" content="2017-06-04T09:33:21.446Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用hbuilder就是不用condova打包">
 <meta name="twitter:description" content="用hbuilder打包vue出现vuex requires a Promise polyfill in this browser">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/6241299-17931c7f2988b43f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
-    <link rel="alternative" href="/atom.xml" title="JSONs!���Ƴ���Ա���ǌ�˿����֪��" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="json的博客！" type="application/atom+xml">
   
   
     <link rel="icon" href="/img/favicon.ico">
@@ -71,6 +71,8 @@ var _hmt = _hmt || [];
 		  <h1 class="header-author"><a href="/">JSON</a></h1>
 		</hgroup>
 		
+		<p class="header-subtitle">码农，程序猿，热爱科技</p>
+		
 
 		<nav class="header-menu">
 			<ul>
@@ -78,8 +80,6 @@ var _hmt = _hmt || [];
 				<li><a href="/">主页</a></li>
 	        
 				<li><a href="/archives">所有文章</a></li>
-	        
-				<li><a href="/tags/随笔/">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -131,9 +131,9 @@ var _hmt = _hmt || [];
 			  <h1 class="header-author js-header-author">JSON</h1>
 			</hgroup>
 			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>码农，程序猿，热爱科技<i class="icon icon-quo-right"></i></p>
 			
 			
-				
 			
 				
 			
@@ -156,14 +156,12 @@ var _hmt = _hmt || [];
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 70%">
+				<ul style="width: 50%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/archives">所有文章</a></li>
-		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 50%"><a href="/archives">所有文章</a></li>
 		        
 				</ul>
 			</nav>
@@ -198,10 +196,11 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="问题：用vue-cli脚手架写的用了vuex！结果在用hbuilder打包在真机测试的时候出现vuex-requires-a-Promise-polyfill-in-this-browse报错！"><a href="#问题：用vue-cli脚手架写的用了vuex！结果在用hbuilder打包在真机测试的时候出现vuex-requires-a-Promise-polyfill-in-this-browse报错！" class="headerlink" title="问题：用vue-cli脚手架写的用了vuex！结果在用hbuilder打包在真机测试的时候出现vuex requires a Promise polyfill in this browse报错！"></a>问题：用vue-cli脚手架写的用了vuex！结果在用hbuilder打包在真机测试的时候出现vuex requires a Promise polyfill in this browse报错！</h4><h4 id="解决方法如下："><a href="#解决方法如下：" class="headerlink" title="解决方法如下："></a>解决方法如下：</h4><p><strong>报错原理：</strong>因为使用了 ES6 中用来传递异步消息的的Promise，而IE低版本的浏览器不支持。说白了就是hbuilder中打包的代码中不能支持ES6！<br><strong>解决原理：</strong>加入babel polyfill，可以模拟ES6使用环境，支持所有ES6新语法！<br><a id="more"></a></p>
+        <script src="/assets/js/APlayer.min.js"> </script><script src="/assets/js/DPlayer.min.js"> </script><p>问题：用vue-cli脚手架写的用了vuex！结果在用hbuilder打包在真机测试的时候出现<br><code>vuex requires a Promise polyfill in this browse</code> 报错！</p>
+<h4 id="解决方法如下："><a href="#解决方法如下：" class="headerlink" title="解决方法如下："></a>解决方法如下：</h4><p><strong>报错原理：</strong>因为使用了 ES6 中用来传递异步消息的的Promise，而IE低版本的浏览器不支持。说白了就是hbuilder中打包的代码中不能支持ES6！<br><strong>解决原理：</strong>加入babel polyfill，可以模拟ES6使用环境，支持所有ES6新语法！<br><a id="more"></a></p>
 <p><strong>解决方法：</strong><br>1.进入vue项目根目录下执行命令行<code>npm install --save babel-polyfill</code>安装babel-ployfill<br>2.本地进入vue项目根目录下找到<strong>node_modules</strong>目录！就是安装依赖的那个文件。找到<strong>babel-polyfill</strong>文件夹下面的<strong>polyfill.min.js</strong>！拷贝出来放到根目录下的<strong>static</strong>静态文件夹下面！<em>node_modules下面文件夹很多慢慢往下翻。不要急骚年！想想我不知道怎么解决的时候自己尝试解决有多难就好了！</em><br><img src="http://upload-images.jianshu.io/upload_images/6241299-17931c7f2988b43f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="QQ截图20170602200633.png"><br>3.放进去还没结束！看见图片中的index.html没！这是vue的入口文件！把<strong>polyfill.min.js</strong>引入！所有的页面都是在这个页面展现的！里面也可以引入传统的js文件！记的放在body前面！以免出现使用的时候找不到！<em>为啥找不到！去复习下js是怎么执行的！</em></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/6241299-0186501161151570.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="QQ截图20170602202120.png"><br>4.现在在hbuilder运行一遍！<br><img src="http://upload-images.jianshu.io/upload_images/6241299-ce108ecf4e80c771.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br>好了！骚年！app已经可以打包了！<br>这是我用vue写出来的小说界面！现在是打包成app!纯纯的H5</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6241299-1dd35fb2b9937952.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br>顺便附上我的<a href="http://json520.com/" target="_blank" rel="external">博客地址</a> <strong>QQ:397939857</strong></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6241299-1dd35fb2b9937952.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br>顺便附上我的<a href="http://json520.com/">博客地址</a> <strong>QQ:397939857</strong></p>
 
       
 
@@ -215,7 +214,7 @@ var _hmt = _hmt || [];
             <span class="tooltip-content">
               <span class="tooltip-text">
                 <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>敢超过1块我跟你急！我不爱钱！<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
                     
                     <div class="reward-box-item">
@@ -317,7 +316,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/06/02/001/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://json520.com/2017/06/02/001/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -330,6 +329,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2017/06/05/002/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          在hexo里面插入视频和音乐！提高自己的逼格！
+        
+      </div>
+    </a>
   
   
     <a href="/2015/02/05/md文章标签格式模板/" id="article-nav-older" class="article-nav-link-wrap">
@@ -453,15 +461,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">模板</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">hbuilder</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">模板</a>
               </li>
             
             <div class="clearfix"></div>
@@ -544,7 +552,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">JSON&lt;br/&gt;前端一枚！致力于打破程序员都是屌丝的认知！&lt;br/&gt;热爱科技！热爱生活！热爱妹纸！</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">JSON&lt;br/&gt;前端一枚！致力于打破程序员都是屌丝的认知！&lt;br/&gt;热爱科技！热爱生活！热爱妹纸！&lt;br /&gt;我们的宗旨是：只进入你的身体！不进入你的生活！&lt;br /&gt;微信：DD397939857</div>
   	  	
     	</section>
     
